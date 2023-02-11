@@ -65,8 +65,8 @@ return packer.startup(function(use)
 
     --[[ COLORSCHEMES ]]-- 
     use {
-        "ramojus/meliora.nvim",
-        requires = {"rktjmp/lush.nvim"}
+        "ramojus/mellifluous.nvim",
+        requires = { "rktjmp/lush.nvim" },
     }
 
     use "nyoom-engineering/oxocarbon.nvim"
