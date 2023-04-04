@@ -1,3 +1,3 @@
 vim.opt.wrap = true
 vim.opt.linebreak = true
-vim.opt.formatoptions = "tqj"
+vim.opt.formatoptions = "qj"
