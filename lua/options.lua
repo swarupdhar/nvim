@@ -1,7 +1,4 @@
--- [[ colorscheme and looks ]]
-vim.cmd [[ colorscheme catppuccin ]]
-
--- disable netrw for nerdtree plugin
+-- [[ disable netrw for nerdtree plugin ]]
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
@@ -13,7 +10,7 @@ vim.opt.encoding = "utf8"
 vim.opt.fileencoding = "utf8"
 vim.opt.syntax = "on"
 vim.opt.termguicolors = true
-vim.opt.guifont = "Hack Nerd Font Mono:h14"
+vim.opt.guifont = "IosevkaTerm Nerd Font Mono:h14"
 vim.opt.cursorline = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
@@ -41,7 +38,11 @@ vim.opt.signcolumn = "yes"
 vim.o.completeopt = 'menuone,noselect'
 
 
--- [[ Shell settings ]]
+-- [[ colorscheme and looks ]]
+vim.cmd [[colorscheme rose-pine]]
+
+
+-- [[ Shell options ]]
 if string.find(vim.loop.os_uname().sysname, "Windows") then
     vim.cmd [[set shell=pwsh.exe]]
     vim.cmd [[set shellxquote=]]
@@ -54,15 +55,4 @@ elseif string.find(vim.loop.os_uname().sysname, "MINGW32") then
     vim.cmd [[let &shellcmdflag = '-c']]
     vim.cmd [[set shellxquote=]]
 end
-
-
--- [[ Highlight on yank ]]
-local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
-vim.api.nvim_create_autocmd('TextYankPost', {
-    callback = function()
-        vim.highlight.on_yank()
-    end,
-    group = highlight_group,
-    pattern = '*',
-})
 
