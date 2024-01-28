@@ -12,7 +12,6 @@ return {
             modules = {},
             sync_install = false,
 
-            -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
             auto_install = false,
 
             highlight = { enable = true },
@@ -29,7 +28,7 @@ return {
             textobjects = {
                 select = {
                     enable = true,
-                    lookahead = true, -- Automatically jump forward to textobj, similar to targets.vim
+                    lookahead = true,
                     keymaps = {
                         -- You can use the capture groups defined in textobjects.scm
                         ['aa'] = '@parameter.outer',

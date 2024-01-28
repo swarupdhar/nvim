@@ -4,7 +4,9 @@ return {
 
     config = function ()
         require("rose-pine").setup {
-            disable_italics = true,
+            styles = {
+                italic = false,
+            },
         }
     end,
 }
