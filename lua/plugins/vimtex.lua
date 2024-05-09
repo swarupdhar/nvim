@@ -1,4 +1,4 @@
 return {
-    'lervag/vimtex',
-    ft = 'tex',
+    "lervag/vimtex",
+    ft = "tex",
 }
