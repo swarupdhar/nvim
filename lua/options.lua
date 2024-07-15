@@ -40,7 +40,6 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 16
 vim.opt.hlsearch = true
 vim.opt.syntax = "on"
-vim.opt.colorcolumn = "100"
 vim.opt.textwidth = 100
 vim.opt.formatoptions = "cqj"
 vim.opt.linebreak = true
