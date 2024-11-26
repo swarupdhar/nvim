@@ -8,6 +8,7 @@ return {
         wk.add {
             { "<leader>f", group = "[F]ile", },
             { "<leader>s", group = "[S]earch", },
+            { "<leader>l", group = "[L]SP", },
         }
     end,
 }

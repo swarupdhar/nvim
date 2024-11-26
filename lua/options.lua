@@ -1,7 +1,6 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-vim.g.have_nerd_font = true
 vim.opt.termguicolors = true
 
 vim.opt.undofile = false
@@ -31,6 +30,7 @@ vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.signcolumn = "yes"
+vim.opt.colorcolumn = "80"
 
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 4
