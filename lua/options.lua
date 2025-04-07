@@ -50,7 +50,6 @@ vim.g.netrw_keepdir = 0
 vim.g.netrw_sort_sequence = [[[\/]$,*]]
 vim.g.netrw_sizestyle = "H"
 vim.g.netrw_liststyle = 3
-vim.g.netrw_list_hide = vim.fn["netrw_gitignore#Hide"]()
 vim.g.netrw_hide = 0
 vim.g.netrw_preview = 1
 vim.g.netrw_browse_split = 4

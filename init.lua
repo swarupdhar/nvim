@@ -1,3 +1,3 @@
 require "options"
-require "lazy-config"
 require "keybinds"
+require "lazy-config"
