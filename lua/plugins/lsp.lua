@@ -53,18 +53,20 @@ return {
     capabilities = vim.tbl_deep_extend("force", capabilities, require("blink.cmp").get_lsp_capabilities())
 
     local servers = {
-    -- clangd = {},
-    -- gopls = {},
-    -- pyright = {},
-    -- rust_analyzer = {},
         lua_ls = {
-            -- cmd = {...},
-            -- filetypes = { ...},
-            -- capabilities = {},
             settings = {
                 Lua = {
                     completion = { callSnippet = "Replace", },
                     diagnostics = { disable = { "missing-fields" } },
+                },
+            },
+        },
+        pylsp = {
+            settings = {
+                pylsp = {
+                    plugins = {
+                        pycodestyle = { enabled = false }
+                    },
                 },
             },
         },

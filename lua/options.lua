@@ -43,6 +43,7 @@ vim.opt.syntax = "on"
 vim.opt.textwidth = 100
 vim.opt.formatoptions = "cqj"
 vim.opt.linebreak = true
+vim.opt.guicursor = "n-v-c-i:block"
 
 vim.g.netrw_winsize = 20
 vim.g.netrw_banner = 0
