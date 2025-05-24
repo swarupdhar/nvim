@@ -1,5 +1,5 @@
 return {
-    "epwalsh/obsidian.nvim",
+    "obsidian-nvim/obsidian.nvim",
     version = "*",
     lazy = true,
     cmd = "ObsidianSearch",
@@ -16,6 +16,9 @@ return {
                 name = "notes",
                 path = "~/notes",
             },
+        },
+        completion = {
+            blink = true,
         },
     },
 }
