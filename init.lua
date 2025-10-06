@@ -40,8 +40,10 @@ vim.opt.encoding = "UTF-8"
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.guicursor = "n-v-c-i:block"
+vim.opt.showmode = false
+vim.cmd.colorscheme [[retrobox]]
 
--- [[ Global keymaps ]]
+-- [[ Keymaps ]]
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
@@ -50,7 +52,7 @@ vim.keymap.set("n", "n", [[nzzzv]], { desc = "Next search result (centered)" })
 vim.keymap.set("n", "N", [[Nzzzv]], { desc = "Previous search result (centered)" })
 vim.keymap.set("n", "<C-d>", [[<C-d>zz]], { desc = "Half page down (centered)" })
 vim.keymap.set("n", "<C-u>", [[<C-u>zz]], { desc = "Half page up (centered)" })
-vim.keymap.set("x", "<leader>p", [["_dP]], { desc = "Paste without yanking" })
+vim.keymap.set({ "n", "x" }, "<leader>p", [["_dP]], { desc = "Paste without yanking" })
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { desc = "Delete without yanking" })
 vim.keymap.set("n", "<C-h>", [[<C-w>h]], { desc = "Move to left window" })
 vim.keymap.set("n", "<C-j>", [[<C-w>j]], { desc = "Move to bottom window" })
@@ -105,13 +107,6 @@ require "lazy".setup {
         { "echasnovski/mini.statusline", version = "*", config = {}, },
         { "lervag/vimtex", ft = "tex", },
         {
-            "ellisonleao/gruvbox.nvim",
-            priority = 1000,
-            config = function()
-                vim.cmd.colorscheme [[gruvbox]]
-            end
-        },
-        {
             "lewis6991/gitsigns.nvim",
             opts = {
                 signs = {
@@ -129,11 +124,6 @@ require "lazy".setup {
             config = function()
                 local wk = require("which-key")
                 wk.setup {}
-
-                -- wk.add {
-                --     { "<leader>f", group = "[F]ile", },
-                --     { "<leader>s", group = "[S]earch", },
-                -- }
             end,
         },
         {
