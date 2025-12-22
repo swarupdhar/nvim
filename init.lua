@@ -41,7 +41,6 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.guicursor = "n-v-c-i:block"
 vim.opt.showmode = false
-vim.cmd.colorscheme [[retrobox]]
 
 -- [[ Keymaps ]]
 vim.g.mapleader = " "
@@ -107,6 +106,13 @@ require "lazy".setup {
         { "echasnovski/mini.statusline", version = "*", config = {}, },
         { "lervag/vimtex", ft = "tex", },
         {
+            "ellisonleao/gruvbox.nvim",
+            priority = 1000,
+            config = function()
+                vim.cmd.colorscheme [[gruvbox]]
+            end,
+        },
+        {
             "lewis6991/gitsigns.nvim",
             opts = {
                 signs = {
@@ -149,8 +155,9 @@ require "lazy".setup {
                 },
             },
             config = function(_, opts)
-                require("nvim-treesitter.install").prefer_git = true
-                require("nvim-treesitter.configs").setup(opts)
+                require'nvim-treesitter'.setup {
+                    install_dir = vim.fn.stdpath('data') .. '/site'
+                }
             end,
         },
         {
