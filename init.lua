@@ -41,7 +41,7 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.guicursor = "n-v-c-i:block"
 vim.opt.showmode = false
-vim.cmd.colorscheme [[retrobox]]
+vim.cmd.colorscheme [[slate]]
 
 -- [[ Keymaps ]]
 vim.g.mapleader = " "
